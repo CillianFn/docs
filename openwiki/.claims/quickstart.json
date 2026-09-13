@@ -1,25 +1,7 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:c47bbe4d6ed5f24bc069bfa06330246e1817d43fe55c9459f0334e943667031a",
+  "pageVersion": "sha256:e1f238b2715b851773e70a7d174840b51c81be68e6089b3c8bcb21b9863d7222",
   "claims": [
-    {
-      "id": "claim_d8d8a35bd795404f8072491acc9f3276",
-      "statement": "This repository builds the Mintlify site docs.langchain.com from authored files in src/ into generated build/ output. DocumentationBuilder clears build/ and emits Python and JavaScript OSS variants, unversioned OpenWiki and Deep Agents Code content, LangSmith content, Managed Deep Agents variants, and shared files.",
-      "evidence": [
-        {
-          "resource": "repo://AGENTS.md#L10-L18",
-          "version": "repo-lines-v1:sha256:1e439ce7b8fef0cb9848488e5cebaa57da700e0fc95299f729a2bca6ee817888:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjVhZjNjMDczYTlhMDBjMTJkZTdkYjMzOGUzNTM3YTE4NTNkMjBmNjI1MjU0YjdmM2ZkYjA3ZWZjODdjNjhlOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzI5N2NmNTQzZTliMDJhNDIyOTMwNzY2NmQ3MTAwMjEwYzExNThiYzA0N2VkODExM2M3Nzk1ZTFmOTBiZmE3MCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmVkNzlkZWQ5NDY0NTU3NGRkNzc5MzBhMTkyNWE1MmM0MWU3OGYzYzQ5MDcxNzk5YWRiMzA5OTE5ZjY0YjM3OSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjJkZmVkOTFjZTk0MjJkNTJkZjM4MjI3YWU4YzU0NmUzY2IxMDM0NjIwZTFmYjBmNGE5YjhlNmU0Y2U1ZTQwMCJ9"
-        },
-        {
-          "resource": "repo://README.md#L3-L6",
-          "version": "repo-lines-v1:sha256:2164b5976ed4b9bb0406d2cc00dd26d2e3febe93035d90b4da01a82d64f00324:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNTAwYjRlMThmOGQ1NmUxN2FmYzRkNzIwMGFjYjhiZjliZDBhMWRmNDgzZDk0M2U1NjI4NWE4MGQ3NmEzNzZmOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWZkZWE0MzhkNGNmMjMzMjZhNWMxMzc4OWQzMWEzNzQwYWVjYjM1ZDYwZGRlY2UxNDk2N2M0Njk5YTE4YTNkNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjIsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiM2FlZWU3MDcxMjMwZGQwZDc0NzkyYjg0MzgyNzU1ZGNhNzM2NmNmZWNmNWQxMGY5MmFlNDUzNTJlZWRiMzVkYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzBjYzI4Y2NhMmM3Yjg4OTY3MTI3ZDNmMjA5NThkNzY3NzY5OGM4M2MxMGEzNzhkZGRjOTA5M2Y0NWVjMTM3YiJ9"
-        },
-        {
-          "resource": "repo://pipeline/core/builder.py#L75-L136",
-          "version": "repo-lines-v1:sha256:949e4203139c8a0525ca36ea161a9e5ecc45b767ad72829f8d3d2624562a9d96:eyJzZWxlY3RlZExpbmVDb3VudCI6NjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM3YzVhYjc5M2VjZTcyMTM3MjRiODY4N2NmOTI5ZjBmYWMyZjBkYTA1YjlmZjVlODM0YWMyNzQzZWQ3MTNkYjEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM2NWVmYjcwNTkxYjM3NDlkZGZiZjI1N2VlNDEwNmNiOWRiZGUxMmM0YTg2YTYwYTZlOTBjNmVkMzdlNjdiZGEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImIxZjE1NmU0ZDE1OGJlNGRkMzExOTNjZGRiZWQ2NGFhOTExYjEzOTUxOWZiMTI5YWEzMjFmZmQ4NzQ2OTdiNmEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjBlNDk4ZDg2ODA5MTc5NTA0YWNjOWUwNjdlMzY2MDY1ZDU3YzZmMmJjNzA5ZDA2ZWI5NGE4MTRkOTEwZTU4NzkifQ"
-        }
-      ]
-    },
     {
       "id": "claim_cd46bf89d1d248b38a743d520f98c445",
       "statement": "Local development requires running 'make install' to install dependencies and 'make dev' to start a development server at localhost:3000 that watches /src for changes and provides live preview through Mintlify.",
@@ -126,21 +108,11 @@
       "evidence": [
         {
           "resource": "repo://Makefile#L123-L128",
-          "version": "repo-lines-v1:sha256:977a7ffd7851dae95a2e3ed3623de18bad9e07a3d5770fe2be8950000d192992:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYzZjNTgwMTljOTcwZTNiMTczMmFlNjZjOTAwODU2NDM4MjQ2OTUzZjEyY2JhMjlkNjE5YjAwNTcyZmZmMjQ1NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNTJhNWVkN2E2MDNkYTNjOGQ4NGZmMDQ4YTcxMjgyZjRmZjM4YzA3NmVlNTQzNjNhMGQzNjc1OWVjZWQ3ODM0YyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzQ1NDY3MzRiYWY2ZTY2ZGQ0M2Q3MDVmZjg3ZDA5YmM5MjA1NTE4MDU3OTdlMDQzNDZhZTA4YjRjNDU2ODEyMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiODcwZmYxMTQzZmQ5OGMwNzMwNjM0MTk2OTEwYTQ2ZmIzYmJlNzdlMzY0M2YwOGNjMGRlMTNjNzhiZGJiNmI1ZSJ9"
+          "version": "repo-lines-v1:sha256:35fce74f839c9a22cf142c069698dee826667e8e65b9eee0c9982317dc1c9b41:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYzZjNTgwMTljOTcwZTNiMTczMmFlNjZjOTAwODU2NDM4MjQ2OTUzZjEyY2JhMjlkNjE5YjAwNTcyZmZmMjQ1NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNTJhNWVkN2E2MDNkYTNjOGQ4NGZmMDQ4YTcxMjgyZjRmZjM4YzA3NmVlNTQzNjNhMGQzNjc1OWVjZWQ3ODM0YyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzQ1NDY3MzRiYWY2ZTY2ZGQ0M2Q3MDVmZjg3ZDA5YmM5MjA1NTE4MDU3OTdlMDQzNDZhZTA4YjRjNDU2ODEyMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiODcwZmYxMTQzZmQ5OGMwNzMwNjM0MTk2OTEwYTQ2ZmIzYmJlNzdlMzY0M2YwOGNjMGRlMTNjNzhiZGJiNmI1ZSJ9"
         },
         {
           "resource": "repo://pyproject.toml#L2-L6",
           "version": "repo-lines-v1:sha256:ce3a57f4d6945fb75e97e054f459cba29b60cc0b3ad6a459dd663092f4db63e2:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjFkNWI0N2E1ZjY2MjA0YWVkMzBjZDk2YWZhZDVkMDg0ZWE4MDU2M2M1MmVjNjNlNDBjN2JiNGY1Y2NjZjU3OCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZWNlMzFhNjE3YzdiODBiMmM3MmRjYjBhZjg1MTZjZGU0M2EzZmYyZDk5ZjBmZjA4Mjg4MmRmNmVmOGY1M2YwNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjEsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzAyYTgxYzM4MzZlZGVmMmQwYmExMWQyMzUzZmI2ZGFiYzc3NzE1MGE3Y2E4M2VhMGQ5ZTlhNzAzMTNmZWFiYiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjQxZmI1MTk1Zjk2ZDUxZjk5ZGZlZjU4YTAwZDc5YWJjNmQ4MTA1MWZmM2EzOTI5NjUzZTY5MWI5YTkwMjM5MyJ9"
-        }
-      ]
-    },
-    {
-      "id": "claim_667e1b638c064271bdedb25a44c5cfa8",
-      "statement": "Core CI regenerates `src/oss/python/integrations/providers/overview.mdx` with `pipeline/tools/partner_pkg_table.py` and rejects a resulting diff, so changes to that overview must be made through the generator or `packages.yml` and regeneration rather than by hand editing.",
-      "evidence": [
-        {
-          "resource": "repo://.github/workflows/ci.yml#L117-L163",
-          "version": "repo-lines-v1:sha256:c029dc3a4df5f3d0c2b3afc8293aaa93f83a5e1fe5ee835066921c53347479d6:eyJzZWxlY3RlZExpbmVDb3VudCI6NDcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI2YmQ0ZWQ3YjQ2MzJkZTZlNmM2OTgxYjFjZjc3ZGNkYTczOTI4ZmRmNjU5NjM0NTA5MGQxMDEzZjc0MDJlZjMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJmNTU5NzljZTczMDIwMzNlNmIyZmQ3ZDg4ZjUzN2EzYjhlMDkxZWEzMDVjODExZmZhMTI3NGJmNTc2NGVhNWUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBiNmRjOWI0ODkzYzQ1ZjU1ZjUyZmE3NmI5NDE2Y2NjODdjYmU0ZjI2N2U1YmM0ODBkZjE4ZmY1OGMzNGZhYjciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
         }
       ]
     },
@@ -158,53 +130,45 @@
         },
         {
           "resource": "repo://AGENTS.md#L39-L60",
-          "version": "repo-lines-v1:sha256:816ac1c6b7ddd52f6c982cfae24151df29f0454d1854f66e36d9909f8e12971c:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhiMTVhMmI0NDRmZjQ1ZTkwNjk1M2FkYzM5NGQwMTU2MDJjM2EyMThjNTQ1ODM4MDVjZDdjMTM3YWUwZTgyNTQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlhYmM4MzNiMWMwOTMzOTQ1MmI1NTE1ZmNmMmM0M2JlM2IwZjczYmJiYjgwODZhNjQ4MDMyMGY4ODZiM2ZmMjEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImFkZGEwNDcxNTE0OTc0ZWNhODU5NWM0NjdjNGJhZjI0Y2E4YTNmMDM4ZTc2MDg5YmI5MDZkMzU4OWUzYjFjNGUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZlYjBiYmI4MzcwNTUxZGE4NDE5ZDZmZWY4NWZlMDJkNmNmZTNkMTBmYjE0ZmUxMjBjNTk0Y2VjNDBkMTNhNzMifQ"
+          "version": "repo-lines-v1:sha256:f3dc5d9eca102db0f3d1abf631661fbcc060af9cf152e3f3f0ac5784a12b3b37:eyJzZWxlY3RlZExpbmVDb3VudCI6MjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhiMTVhMmI0NDRmZjQ1ZTkwNjk1M2FkYzM5NGQwMTU2MDJjM2EyMThjNTQ1ODM4MDVjZDdjMTM3YWUwZTgyNTQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlhYmM4MzNiMWMwOTMzOTQ1MmI1NTE1ZmNmMmM0M2JlM2IwZjczYmJiYjgwODZhNjQ4MDMyMGY4ODZiM2ZmMjEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImFkZGEwNDcxNTE0OTc0ZWNhODU5NWM0NjdjNGJhZjI0Y2E4YTNmMDM4ZTc2MDg5YmI5MDZkMzU4OWUzYjFjNGUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZlYjBiYmI4MzcwNTUxZGE4NDE5ZDZmZWY4NWZlMDJkNmNmZTNkMTBmYjE0ZmUxMjBjNTk0Y2VjNDBkMTNhNzMifQ"
         }
       ]
     },
     {
-      "id": "claim_f8aa350378524d72a1d69471b981d4e7",
-      "statement": "Runnable documentation sample source files under `src/code-samples/` are executed by `make test-code-samples`, and `make code-snippets` extracts them into an intermediate and generates importable MDX snippets; generated snippet output is not the authored input.",
+      "id": "claim_fcb11600feb542a2ad9740ea9d3971a5",
+      "statement": "This repository builds the Mintlify site docs.langchain.com from authored files in src/ into generated build/ output; build output is disposable rather than an authoring target.",
       "evidence": [
         {
-          "resource": "repo://AGENTS.md#L86-L94",
-          "version": "repo-lines-v1:sha256:f2b71f3a1543666ea05a1910138f0e7d3e10e0cfaf55956fad25d52718261435:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTE5MTM1ZDUwNzVmYjdlOGFiYWFmNTMwOGJmYTk1NjE2MTRmZTFiMjliNmViOTU1YjQ5YTZkZWU3MWIxNTgwNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOWFjYThjY2M2M2MwMTY3NjUwMjIwMWFkZjkyNjc0MDU2MzA2YmUzNWFjMTE3NzFhM2MwNTEyOWUyMTVmN2M5ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDYyMjUyMDYxOTNmZTgyMDM3YmNmOWQwZmU3YzY0N2E0ODJlNWMzM2U1YWJiNjU1MzlkN2Q0MDE2ZTZmN2M2YiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDY3ZDQ0M2ZhMzBlMjJiMTE1MTBiY2E4N2ZjMTNjZDcxOWM5MWZkZDIxOTQ1MWNhYjVlNWFlZTU0MTAwMGUwOCJ9"
+          "resource": "repo://README.md#L3-L6",
+          "version": "repo-lines-v1:sha256:2164b5976ed4b9bb0406d2cc00dd26d2e3febe93035d90b4da01a82d64f00324:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNTAwYjRlMThmOGQ1NmUxN2FmYzRkNzIwMGFjYjhiZjliZDBhMWRmNDgzZDk0M2U1NjI4NWE4MGQ3NmEzNzZmOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWZkZWE0MzhkNGNmMjMzMjZhNWMxMzc4OWQzMWEzNzQwYWVjYjM1ZDYwZGRlY2UxNDk2N2M0Njk5YTE4YTNkNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjIsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiM2FlZWU3MDcxMjMwZGQwZDc0NzkyYjg0MzgyNzU1ZGNhNzM2NmNmZWNmNWQxMGY5MmFlNDUzNTJlZWRiMzVkYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzBjYzI4Y2NhMmM3Yjg4OTY3MTI3ZDNmMjA5NThkNzY3NzY5OGM4M2MxMGEzNzhkZGRjOTA5M2Y0NWVjMTM3YiJ9"
         },
         {
-          "resource": "repo://Makefile#L185-L211",
-          "version": "repo-lines-v1:sha256:eff8bc3b0460bf515768b3a51e418d1f02c7093e0c27b077cbcd53e2f65ecbf4:eyJzZWxlY3RlZExpbmVDb3VudCI6MjcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxYTlkNTE2ZGQ1NjBiOTkzMWU5MDk4YzU2ZDg2M2RlMWJiN2YyNDA2YTFjZDc4YjU1YTJhNzE4OTVjOWI1OWIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjczYWFjYjYyOWIyYzAxOWQ4MDA3OWYxZTg0MzNmZjZiMGE3ZTc5ZjVhMjExMGEyNzc4ZjdiOTA1YTQzZTZjYmQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjU3MmU5ZmQ4ZmMyZDZkZDRlMmIxZTU5ZTI0ZjdkNWUyNGRkOGE2YjgzODY3ZmU3OWJjOGRhZjg5Y2EwMDU1MTIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImY5Y2QwMzJlYjVlZDAwZmQ1OTA2OTBhOWU2MzExNDgzMjgxMDNhYjg2OTdmZTViYmY1MDEyYmZjMmU4ZmFhYjYifQ"
+          "resource": "repo://README.md#L78-L85",
+          "version": "repo-lines-v1:sha256:ed3679263448cc717701325173f49295653af488624744abf54ebbc18288db7c:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjdmMzllMmMwOGMxNzM4ZjllYjcyNzQxNmYxMzY5OWU0MmM0NGZmMmU2MGU1MjJlNDA4N2U5MTJhYTM1YjdlNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDc3ZTdkYzI3NTBmNjY5NWVjNTY1NzcwNDY0NGUwNjYxNjljOTdkYjFmOTQ5M2Q1ODk4NTIzNmEwYzk3Mzc1NCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNmExZGM4Y2JmNDZmYzcxMWI2OTkzOTNmYWQ4MTNiYmZhZTM1ZDNkZGNiZjZhMDI1ZWY1NWE3MzcyOTE2NTllZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMWRhMzRjZDQ1ZTQ3NzhlODM3ZjdjOGZiNzM4Njc3MTk5ZTI1ZTk2ZmExN2YyZjlhYWI1ZmJiNzViM2QxNWUyYSJ9"
         },
         {
-          "resource": "repo://scripts/test_code_samples.py#L68-L155",
-          "version": "repo-lines-v1:sha256:aa65caefa397c6c232fce0c8cd61cbca675b2522ba2348d4a813404be05b7e74:eyJzZWxlY3RlZExpbmVDb3VudCI6ODgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRkZjY0ODQ4ZjM0MGIzYmRhMDFlYjAwMGM1MjI5N2E2MGViYjQ3MjlmZWZlZjUzZjJhYmNjZDFhMTEzOGRkMWYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMwYzFmMTg4ZjE0MmVkN2E4MjQ2ODBiMjA3MTcyYzU1MTliYzYxNGE0OGZkYTdjZjE2N2VkYjhkZGY3OTk1NmMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjkyODNiNWRmYTgwMmY0Zjk4MWExMjE2MWY4ZDRiYzYxY2YxYTFiODlkMDVhNTMxN2Q2ZjU2N2MzOTRmYzM1ZDUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjYyNDUwYzJhMWM0ZDIzMTNhZDIzZmU5ZjBiN2JkZjM4NTY1MDM2NjU1Yzc5Yzg3OTY2OGI3MzE2OTEzMDdlOGUifQ"
+          "resource": "repo://pipeline/core/builder.py#L75-L99",
+          "version": "repo-lines-v1:sha256:b7be050ad5b235dd37e8d16cb03d559fe51b071ecf4916282775e0e9a127d161:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM3YzVhYjc5M2VjZTcyMTM3MjRiODY4N2NmOTI5ZjBmYWMyZjBkYTA1YjlmZjVlODM0YWMyNzQzZWQ3MTNkYjEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMxMzBmZmFkNDljZTg2ZmY0M2Q2MTRmOGM3MjBlYTg2NDA3ZTM2NGNhZTExNjhlMTVjOWY2NDdhYmFlMWM0YTgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImIxZjE1NmU0ZDE1OGJlNGRkMzExOTNjZGRiZWQ2NGFhOTExYjEzOTUxOWZiMTI5YWEzMjFmZmQ4NzQ2OTdiNmEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjczNDM5NzQ5MzYwYWYwOGJmMDQzNzljMGQ2YTI4NzU2ZWM2ZWViODE0MzA3YmVlMWQwYjBkN2E2MDI3MTI3ZGMifQ"
         }
       ]
     },
     {
-      "id": "claim_502f836da300478c8337a2f68ef458f9",
-      "statement": "The code-sample workflow skips fork pull requests, runs only changed supported sample files for internal pull requests, and uses scheduled or manual full runs to test all samples, enable tracing, regenerate snippets, and update a trace-refresh pull request only after successful testing and generation.",
+      "id": "claim_2a0ceab2c2e74a81a6a7bb20d8354d6e",
+      "statement": "`make install` invokes `make skills`; that target links each canonical `.agents/skills/` directory into `.claude/skills/`, preserves personal non-symlink entries, and removes stale symlinks.",
       "evidence": [
         {
-          "resource": "repo://.github/workflows/test-code-samples.yml#L130-L173",
-          "version": "repo-lines-v1:sha256:5fc354930d554d7e0915f86da2dd621583e0d2aba96b76576d5fa15323a6bb41:eyJzZWxlY3RlZExpbmVDb3VudCI6NDQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRhYTZhZWY1YjUzMWRjYTFlOTBlN2JlMzQ4YjA0NjhhZjQ5YzJhYmEyZWVhYzRiN2Y3YjVkNjc4ZjhmOWY0MzQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjUyY2VlZWE1ZDA5YTYyNzhhN2IyNzFlYmI2MTlhYmJmN2JmNGRlZjgwODJjMjUzZTA1MTI4MWY5NWRlZDczY2MiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjRjMmEzODE2Mjc1NGM0MjViNjA4NDIyNmUwODkxMTZjMjkwMjA1NTg1ZmUwZjA0MjhjOWE1ZGNlMzQ4MDcwZWUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE1Y2NhYjNlMDYzNWJhNjgwMzY0NTkwZjMwMmYwZTNiODFhNjdmMjcwOWFiY2JlMmIyZmYyMmUyZDI5OWJhOGMifQ"
+          "resource": "repo://Makefile#L123-L129",
+          "version": "repo-lines-v1:sha256:35fce74f839c9a22cf142c069698dee826667e8e65b9eee0c9982317dc1c9b41:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYzZjNTgwMTljOTcwZTNiMTczMmFlNjZjOTAwODU2NDM4MjQ2OTUzZjEyY2JhMjlkNjE5YjAwNTcyZmZmMjQ1NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNTJhNWVkN2E2MDNkYTNjOGQ4NGZmMDQ4YTcxMjgyZjRmZjM4YzA3NmVlNTQzNjNhMGQzNjc1OWVjZWQ3ODM0YyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzQ1NDY3MzRiYWY2ZTY2ZGQ0M2Q3MDVmZjg3ZDA5YmM5MjA1NTE4MDU3OTdlMDQzNDZhZTA4YjRjNDU2ODEyMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiODcwZmYxMTQzZmQ5OGMwNzMwNjM0MTk2OTEwYTQ2ZmIzYmJlNzdlMzY0M2YwOGNjMGRlMTNjNzhiZGJiNmI1ZSJ9"
         },
         {
-          "resource": "repo://.github/workflows/test-code-samples.yml#L179-L264",
-          "version": "repo-lines-v1:sha256:7c52708c95d3ccd29e80f423b60bb253512584171b4de0eafc6dcecae2122259:eyJzZWxlY3RlZExpbmVDb3VudCI6ODYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFmNWJlZGE1YjkyZmVlYWQ4MmFlYTM5NzVkMjk0ZDhiMGU0NWYxZjk2NjA1YzlhOWE4ZWQ0YmQ2ZGVhNGZhN2EiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIxZjAyNTNkNzhlYjIwMGNiMmNkNzYwNjYzN2Q1MDQwZWE0MjNkZDRlM2E1NGU5MjcwMGRiZDZiY2QzNWVkNDMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImU4YjE3MmZhYzljOGQyZjgxOTc0MzNhMjFhZmEwY2M2OTc4N2NmYTU4NDAzNjdkNjU3MTVjMWUxMmE3OTY2YzYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
-        },
-        {
-          "resource": "repo://.github/workflows/test-code-samples.yml#L49-L79",
-          "version": "repo-lines-v1:sha256:93761420003f926ef7c09ca0042be8a53cd4676c67735f82de2de012aee26c73:eyJzZWxlY3RlZExpbmVDb3VudCI6MzEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFjNTFlYzVhMGQ3ZmM3ZmJkOThiZWUxMzRjOTczZjQzZDRmZGM3MWIyMTU2MDFiNDkzNDhjNmQ1Mjg1OTg0NWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJmNTU5NzljZTczMDIwMzNlNmIyZmQ3ZDg4ZjUzN2EzYjhlMDkxZWEzMDVjODExZmZhMTI3NGJmNTc2NGVhNWUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM2MGFkNjRhNzc2N2YyNmFjNDRhMjcxNzgwN2E4NjAzYzQ5ZmQxZTAwMDE1MWZhYzgzYjk1OWE4MDBlYjAzNzEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImI2NTk5MzFmMTg2OTAwYzI3YWQ0Njg0M2VkYmJhNTU4YTMyZjcyNTNlMzQ3MTZiNDEyMDhhZDEwZTNhNzdmNzEifQ"
-        },
-        {
-          "resource": "repo://.github/workflows/test-code-samples.yml#L8-L29",
-          "version": "repo-lines-v1:sha256:f4997c6b37da24ee5b2313660342751414552487094a2cdecec952e4e01ecbbb:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU5NmRjNDgxNDlmNWE4M2QxZWQ2ZGJiMzliYmM3ZTJiOTAyYWEzZDM0ZDZiZDVhZTRiMjkxYjY4ZGYwY2E3OWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY2ZTk4Mjg3MzgzYWQyYzg1NDFjYmYzOTA1NGViZmVhZDZkZTY5Njg0ZjE1OGI4MzcyN2JkYTg2MjlkYTExNjUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE2ZjdkMzdmYjI5NzM5OWZlYTJhNWNlZjFjYzQwMjhjODk5NzlhOTA1MGE5Mjg1NmYwZDk2ZTFjMThiYTE5YTciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijg1MzNmMDVhZDdlZWI0ODNlZGE4MWNiYWVkNWNiNzdmNGU4MjM1MGZmMWJlNGNjNGNiZDE5NTIyMTU2OTcwZjkifQ"
+          "resource": "repo://Makefile#L218-L231",
+          "version": "repo-lines-v1:sha256:35c8299cae4fec9ca35679c2b8851dde40f5399f1baa3041e7d943806f3a90dc:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQzYTQyOWVhMGM2YjgwZmFkZjFhZjQwYTkxYmViMmI3MmVkY2EwOGFiMmNhYmMzOTBlODRmN2Q2ODg5ZjdjM2UiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ4OWEwZmIyMTcxZjliNTk0YmQyZjA5YzQwMmEwYjU1MmRiNjNiNTBlZDBhNzE1OGEzMWQzMGFlYWRhYjVjMzgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY4MTcxMjNlNWUyMmEzMjFkNDQ2OGJjNmNiYjNkNGU0N2IzNzdlODc1Yzg1ZDQ0YWEwYzZiNDVmM2EzY2RhYWQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjkwYjc0YWZkYzRlMzI2MGYwNmUyNzBmNzAyNGU5YWQyZGFlNTJiMWVmNDkxNmExZDJjODE4MmU4MjFiNzRmMWQifQ"
         }
       ]
     }
   ],
   "verification": {
     "by": "openwiki/0.4.3",
-    "at": "2026-09-11T08:21:01.441Z"
+    "at": "2026-09-13T08:18:47.732Z"
   }
 }

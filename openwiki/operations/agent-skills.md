@@ -5,10 +5,16 @@ description: Canonical discovery, distribution, authoring boundaries, and struct
 tags: [agents, skills, documentation, automation, validation]
 verified:
   - by: openwiki/0.4.3
-    at: 2026-09-11T08:21:01.441Z
+    at: 2026-09-13T08:18:47.732Z
 sources:
   - id: openwiki-source-18732c72f962c06354cb62db
     resource: repo://.agents/skills/add-docs-page/SKILL.md
+  - id: openwiki-source-b48b39ee604e5154ddb6fbad
+    resource: repo://.agents/skills/docs-edit/SKILL.md
+  - id: openwiki-source-a5534bfe9d1400e6ecbd306e
+    resource: repo://.agents/skills/docs-team-voice/SKILL.md
+  - id: openwiki-source-1694d3d0c97b7809ac846496
+    resource: repo://.agents/skills/docs-tooling-notion/SKILL.md
   - id: openwiki-source-9361c44d74c0e18006d0d76f
     resource: repo://.agents/skills/README.md
   - id: openwiki-source-8bdd8b6031ea08044f515d8c
@@ -33,24 +39,24 @@ sources:
     resource: repo://Makefile
   - id: openwiki-source-1695beda93a0ca504f038424
     resource: repo://tests/unit_tests/test_skills.py
-generated: { by: "openwiki/0.4.3", at: "2026-09-11T08:21:01.441Z" }
+generated: { by: "openwiki/0.4.3", at: "2026-09-13T08:18:47.732Z" }
 ---
 
 # Agent Authoring Skills
 
-Repository skills are task-specific, on-demand procedures stored in `.agents/skills/`. They make complex documentation work repeatable without putting every procedure into the context of every agent task. Repository-wide invariants belong in `AGENTS.md` and its identical `CLAUDE.md` counterpart; skill bodies link to those rules instead of copying them.
+Repository skills are task-specific, on-demand procedures stored in `.agents/skills/`. They make specialized documentation work repeatable without putting every procedure into every agent task. Repository-wide invariants belong in `AGENTS.md` and its byte-identical `CLAUDE.md` counterpart; skill bodies link to those rules instead of copying them.
 
 ## Understand the source and distribution model
 
 `.agents/skills/` is the canonical, version-controlled skill tree. Each skill is a directory containing `SKILL.md` in the Agent Skills format: YAML frontmatter, including a discovery `name` and `description`, followed by Markdown instructions. The directory name and frontmatter `name` identify the same skill.
 
-Most supported agents discover this tree directly after a clone, including Cursor, Codex, GitHub Copilot, Gemini CLI, OpenCode, and Deep Agents. Claude Code is the exception: it reads `.claude/skills/`, which is gitignored. Run the following command once, and again after a pull that adds or renames a skill:
+Cursor, Codex, GitHub Copilot, Gemini CLI, OpenCode, Deep Agents, Droid, Kilo Code, and other supported agents discover this tree directly after a clone. Claude Code is the exception: it reads the gitignored `.claude/skills/` location. Run the following command once, and again after a pull that adds or renames a skill:
 
 ```bash
 make skills
 ```
 
-The target creates `.claude/skills/` as needed, symlinks each canonical skill directory into it, preserves personal non-symlink entries, and removes a symlink whose source no longer exists. Because the result is a link rather than a copy, edits to `.agents/skills/` are live in Claude Code. For agents with another skill location, the `skills` CLI command copies local files, and its local-source update command does not refresh those copies. Re-run the install command after changes or use symlinks to avoid stale procedures.
+The target creates `.claude/skills/` as needed, symlinks each canonical skill directory into it, preserves personal non-symlink entries, and removes a symlink whose source no longer exists. Because this is a link rather than a copy, edits to `.agents/skills/` are live in Claude Code. For an agent with another skill location, use the `skills` CLI to copy the local source. Its update command does not refresh local-source copies, so rerun the install command after source changes or use symlinks.
 
 ```mermaid
 flowchart TD
@@ -67,69 +73,77 @@ flowchart TD
   Checks --> Contract["Skill name metadata paths and make targets"]
 ```
 
-This diagram shows canonical skill discovery, the linked and copied distribution paths, and the independent contracts that keep skills and global instructions usable.
+This diagram shows canonical skill discovery, linked and copied distribution paths, and the independent contracts that keep skills and global instructions usable.
 
-### Canonical and derived instruction surfaces
+### Maintain canonical and derived instruction surfaces
 
-`AGENTS.md` is the canonical repository guide for global invariants: critical editing rules, source layout, frontmatter and syntax conventions, navigation guidance, and the inventory of available skills. `CLAUDE.md` is not an alternative policy source; it must have identical bytes so agents that recognize its filename receive the same rules. The `check-agents-sync` workflow runs for changes to either file on pull requests and pushes to `main`, and fails if `diff` finds a difference.
+`AGENTS.md` is the authoritative repository guide for universal constraints and orientation, including critical editing rules, repository layout, frontmatter and syntax conventions, navigation guidance, and the skill inventory. `CLAUDE.md` is a compatibility surface, not an alternative policy source. The `check-agents-sync` workflow runs on pull requests and pushes to `main` when either root guide changes, and fails when `diff` finds any difference.
 
-Several instruction files are derived surfaces for tools that do not consume the root files:
+Several files derive from the root guide for tools that do not consume it directly:
 
-- `.cursor/rules/docs-style.mdc` and `.github/instructions/docs-style.instructions.md` mirror the style-guide portion and apply only to `src/**/*.mdx` edits.
-- `.cursorrules` and `.github/copilot-instructions.md` summarize the critical rules, repository structure, quick reference, frontmatter, and syntax for their respective agents.
+- `.cursor/rules/docs-style.mdc` and `.github/instructions/docs-style.instructions.md` mirror the style-guide portion and are scoped to `src/**/*.mdx` edits.
+- `.cursorrules` and `.github/copilot-instructions.md` summarize critical rules, repository structure, quick reference, frontmatter, and syntax.
 - `.claude/skills/` is a local linked distribution surface, not a second skill source.
 
-When changing a section that has copies, update all listed copies in the same pull request. The CI sync check only enforces the `AGENTS.md`/`CLAUDE.md` pair; it does not prove that summaries and path-scoped style copies still express the intended rule. Conversely, do not copy global guidance into a skill: an additional copy can drift without this check.
+When changing a covered root-guide section, update its listed copies in the same pull request. The CI sync job enforces only the root-file pair. It does not prove that summaries and path-scoped style copies are current. Do not add another copy of global guidance to a skill.
 
-## Keep global invariants separate from procedures
+## Keep invariants separate from procedures
 
-Always-on instruction files consume context for every task. A skill initially exposes its `description` for matching, while its body is loaded when the skill is invoked. Keep universal constraints and orientation in `AGENTS.md`/`CLAUDE.md`, and reserve the body of a skill for one task's decisions, tool use, ordering, and verification.
+Always-on instruction files consume context for every task. A skill initially exposes its `description` for matching, then loads its body when invoked. Put universal constraints in `AGENTS.md` and `CLAUDE.md`; give a skill one conditional workflow with its decisions, tool use, ordering, and verification.
 
 | Put it in | Content | Example responsibility |
 | --- | --- | --- |
-| `AGENTS.md` and `CLAUDE.md` | Rules that apply to any edit | Never edit generated `build/` output, preserve required frontmatter, and use the navigation map. |
-| `.agents/skills/<name>/SKILL.md` | A focused, conditional workflow | Add or move a page, extract and test a code sample, review changed prose, or process an integration request. |
+| `AGENTS.md` and `CLAUDE.md` | Rules that apply to every edit | Do not edit generated output, preserve required frontmatter, and use the navigation map. |
+| `.agents/skills/<name>/SKILL.md` | A focused, conditional procedure | Edit an open PR, draft prose, add a page, or record tooling in Notion. |
 | A scoped or compatibility instruction copy | A derived view for an agent or file scope | Load prose-style rules only while editing MDX. |
 
-Skills should link back to the root guide for shared rules. For example, `add-docs-page` relies on it for the navigation map, style guide, and frontmatter rules, then adds the page-specific sequence of navigation, redirects, and validation. `docs-review` similarly combines the global style guide with diff-scoped review behavior. This separation keeps universal safety rules consistent while letting a procedure evolve with its specialized workflow.
+A skill should point readers to the root guide for shared policy, then supply the task-specific information missing there. For example, `add-docs-page` uses the root guide for navigation, style, and frontmatter rules, then owns the page lifecycle and invokes `docs-review` after finished prose. `docs-team-voice` addresses non-mechanical prose decisions, while `docs-tooling-notion` delegates shared voice rules rather than restating them. This boundary limits drift and makes the always-on context useful across tasks.
 
-## Discover and invoke the available procedures
+## Choose the matching procedure
 
-The skill directory currently covers these task boundaries:
+The current tree divides work into the following task boundaries. The skill names are canonical directory and frontmatter names.
 
 | Skill | Use it when | Important handoff or boundary |
 | --- | --- | --- |
-| `add-docs-page` | Adding, moving, renaming, or deleting pages | Updates navigation and redirects, validates the result, then invokes `docs-review` for finished prose. |
-| `docs-review` | Reviewing authored documentation changes | Reviews the changed diff rather than existing prose, and uses Vale plus rules that require human judgment. |
-| `docs-code-samples` | Externalizing runnable documentation snippets | Tests source samples before extraction and generates the MDX include artifacts. |
-| `document-tooling-in-notion` | Recording changes to team tooling in Notion | Routes a topic to one owning Notion page and treats a skill as its own authoritative reference rather than duplicating it. |
-| `submit-integration` | Turning a structured integration issue into listing changes | Runs non-interactively under the maintainer-gated workflow and leaves changes for the workflow to turn into a pull request. |
-| `update-integrations-prs` | Reconciling an existing integration PR with policy | Handles the interactive PR-maintenance path, distinct from new issue intake. |
+| `add-docs-page` | Adding, moving, renaming, or deleting a page | Owns navigation, redirects, and validation; invokes `docs-review` only after prose is complete. |
+| `docs-edit` | Editing a page on an existing PR, a named branch, or in place | Works on the PR head branch rather than creating a competing branch; use `add-docs-page` for lifecycle changes. |
+| `docs-team-voice` | Drafting or revising documentation prose | Covers voice and revision choices that a linter cannot decide; use `docs-review` for the diff-scoped review. |
+| `docs-review` | Reviewing changed documentation prose | Resolves a PR, branch, or working-tree diff, runs Vale, and reports applicable rule-based findings. |
+| `docs-tooling-notion` | Documenting changed team tooling in Notion | Routes a topic to one owning page and performs narrow Notion MCP updates; the repository skill remains its authoritative procedure. |
+| `docs-code-samples` | Moving inline MDX examples to runnable sample files | Owns snippet markers, extraction, and sample-testing constraints. |
+| `submit-integration` | Turning a structured integration issue into listing changes | Runs non-interactively inside the maintainer-gated workflow and leaves changes for the workflow to turn into a PR. |
+| `update-integrations-prs` | Reconciling an existing integration PR with policy | Handles PR maintenance, distinct from new issue intake. |
 
-Deep Agents resolves `submit-integration` from `.agents/skills/` at higher precedence than the former `.deepagents/skills/` location. The integration-submission workflow explicitly requests that skill after a maintainer-authorized issue event, passes parsed issue JSON as untrusted metadata, and lets the workflow handle blockers and pull-request creation. That makes the skill body a controlled procedure inside a broader GitHub Actions trust boundary, not a general permission to mutate GitHub.
+`docs-edit` prevents a common collaboration failure: edits requested on an open PR must land on that PR's head branch. It checks out the tracked branch for same-repository PRs, uses `gh pr checkout` for forked PRs, and prefers `gh pr diff` to a potentially stale local-base comparison. Do not create a new branch unless the request and ownership warrant it.
 
-For the related operational flows, see [Adding and Modifying Documentation Pages](/openwiki/operations/adding-pages.md), [Testing Overview](/openwiki/testing/test-overview.md), [Integration Listing Automation](/openwiki/workflows/integration-listing-automation.md), and [GitHub Actions and CI/CD](/openwiki/integrations/github-actions.md).
+`docs-team-voice` complements the root guide rather than replacing it. It gives authors measurable drafting and revision guidance, such as splitting long sentences, linking first mentions, stating defaults and constraints directly, using exact identifiers, and cutting unverified claims or filler. Run `make lint_prose` after the revision pass; use `docs-review` when a review report is needed.
+
+`docs-tooling-notion` treats the five Docs Team Notion pages as routing destinations with one home per topic. It first checks whether the repository already owns the material, then fetches the selected Notion page before applying narrow `update_content` replacements through the Notion MCP server. Fetch again after a timed-out or asynchronous update before retrying, because the update may already have applied. Avoid `replace_content` on a page with uploaded images, because rewriting can break a short-lived signed image URL.
+
+Deep Agents resolves `submit-integration` from `.agents/skills/` at higher precedence than the former `.deepagents/skills/` location. The integration-submission workflow asks for this skill only after a maintainer-authorized issue event and parsed issue-form JSON; it treats those fields as untrusted metadata. The workflow, not the skill, handles blockers, no-change results, and pull-request creation. The skill is therefore a constrained procedure within a GitHub Actions trust boundary, not a general permission to mutate GitHub.
+
+For related operational flows, see [Adding and Modifying Documentation Pages](/openwiki/operations/adding-pages.md), [CLI Tools](/openwiki/operations/cli-tools.md), [Quickstart](/openwiki/quickstart.md), [Testing Overview](/openwiki/testing/test-overview.md), and [Integration Listing Automation](/openwiki/workflows/integration-listing-automation.md).
 
 ## Add or change a skill safely
 
-Create one directory at `.agents/skills/<name>/` with a `SKILL.md`. Use a kebab-case verb-noun directory name and make the frontmatter `name` exactly match it. Write the `description` in the language of a user request because it is the discovery signal; name the task and likely triggers rather than using a broad topic label. Keep the body to one cohesive workflow. Split unrelated procedures rather than building a skill with unrelated branches.
+Create `.agents/skills/<name>/SKILL.md`. Use a kebab-case verb-noun directory name and make frontmatter `name` exactly match it. Write `description` in the language of a user request because it is the discovery signal. Keep the body to one cohesive workflow, and split unrelated procedures rather than creating branches for them.
 
-Use supported frontmatter keys only. A description is required and must be no more than 1,024 characters. The body can reference real repository paths and `make` targets, but stale references are operational failures because an agent may follow them confidently. Validate the canonical tree, not the Claude symlink path:
+Use supported frontmatter keys only. `description` is required and must contain at most 1,024 characters. Paths and `make` targets named by a skill must stay valid, because agents can act on a stale procedure with confidence. Validate the canonical tree, not the Claude symlink path:
 
 ```bash
 claude plugin validate .agents/skills --strict
 ```
 
-The validator does not follow symlinks, so validating `.claude/skills` warns rather than checking the real contracts. After adding or removing a skill, add or remove its row in both `.agents/skills/README.md` and the `AGENTS.md` Skills table. Since `CLAUDE.md` mirrors `AGENTS.md`, update it identically as part of the same change.
+The validator does not follow the Claude symlinks, so validating `.claude/skills` warns rather than checking the real contracts. After adding or removing a skill, update both the `.agents/skills/README.md` inventory and the `AGENTS.md` Skills table. Update `CLAUDE.md` identically with `AGENTS.md`.
 
 ## Validate contracts and diagnose failures
 
-`tests/unit_tests/test_skills.py` supplies repository-level structural validation. It discovers every child directory of the canonical tree and checks the following contracts:
+`tests/unit_tests/test_skills.py` provides repository-level structural validation. It discovers each child directory in the canonical tree and checks these contracts:
 
-- Every skill directory has a `SKILL.md` with parseable YAML frontmatter, a matching kebab-case name, a nonempty bounded description, and no unrecognized frontmatter keys.
-- Backticked repository paths under known roots and named root files exist unless they are explicitly recognized placeholders, globs, variable expressions, home-directory paths, or gitignored paths.
-- Every `make <target>` mentioned by a skill names a target defined in the root `Makefile`.
-- The skills listed in the README table and the `AGENTS.md` Skills table exactly equal the directories present in `.agents/skills/`.
+- Every directory has a `SKILL.md` with parseable YAML frontmatter, a matching kebab-case name, a nonempty bounded description, and no unrecognized frontmatter keys.
+- Backticked paths under known repository roots and selected root files exist unless they are recognized placeholders, globs, variable expressions, home-directory paths, or gitignored paths.
+- Every `make <target>` named by a skill is defined in the root `Makefile`.
+- The README and `AGENTS.md` tables list exactly the skills that exist as directories.
 
 Run the focused test while changing skill contracts:
 
@@ -137,12 +151,12 @@ Run the focused test while changing skill contracts:
 make test TEST_FILE=tests/unit_tests/test_skills.py
 ```
 
-A frontmatter failure usually means a missing `SKILL.md`, mismatched name, malformed YAML, unsupported key, or absent description. A path or make-target failure means the procedure references a renamed or removed repository interface; update the procedure, not the test. A table mismatch means skill discovery may work while the human and global-instruction inventories are stale, so repair the catalogues as part of the same change. Run `make skills` locally when Claude Code distribution also needs verification.
+A frontmatter failure usually means a missing `SKILL.md`, mismatched name, malformed YAML, unsupported key, or absent description. A path or make-target failure means that a procedure points at a renamed or removed repository interface; correct the procedure rather than weakening the check. A table mismatch means agents may discover the skill while the human and global-instruction inventories are stale. Repair those catalogues in the same change. Run `make skills` locally when Claude Code distribution also needs verification.
 
 ## See also
 
 - [Quickstart](/openwiki/quickstart.md)
 - [Adding and Modifying Documentation Pages](/openwiki/operations/adding-pages.md)
+- [CLI Tools](/openwiki/operations/cli-tools.md)
 - [Testing Overview](/openwiki/testing/test-overview.md)
 - [Integration Listing Automation](/openwiki/workflows/integration-listing-automation.md)
-- [GitHub Actions and CI/CD](/openwiki/integrations/github-actions.md)

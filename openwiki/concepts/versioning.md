@@ -5,7 +5,7 @@ description: How source classification, build-time language rendering, emitted p
 tags: [versioning, documentation-pipeline, navigation, routes, conditional-rendering]
 verified:
   - by: openwiki/0.4.3
-    at: 2026-09-09T08:21:02.265Z
+    at: 2026-09-13T08:18:47.732Z
 sources:
   - id: openwiki-source-d0cdf44431684bdedf34705a
     resource: repo://pipeline/core/builder.py
@@ -13,9 +13,15 @@ sources:
     resource: repo://pipeline/preprocessors/markdown_preprocessor.py
   - id: openwiki-source-a9a8730b7e43a5ad2d0af4f1
     resource: repo://src/docs.json
+  - id: openwiki-source-932afc9f195d1192160413ee
+    resource: repo://src/langsmith/managed-deep-agents-agent-definition.mdx
+  - id: openwiki-source-e86cdb94e153ccc6c527238a
+    resource: repo://src/langsmith/managed-deep-agents-connections.mdx
+  - id: openwiki-source-b4200d8c71c910e082d4d1e4
+    resource: repo://src/langsmith/managed-deep-agents-project-structure.mdx
   - id: openwiki-source-24e5f74f0f40e9bfd381871f
     resource: repo://tests/unit_tests/test_builder.py
-generated: { by: "openwiki/0.4.3", at: "2026-09-09T08:21:02.265Z" }
+generated: { by: "openwiki/0.4.3", at: "2026-09-13T08:18:47.732Z" }
 ---
 
 # Language Versioning Strategy
@@ -90,9 +96,9 @@ Managed Deep Agents is a LangSmith routing exception. A direct `.md` or `.mdx` f
 
 The dedicated full-build pass discovers `managed-deep-agents*.mdx` files and emits Python and JavaScript artifacts. `build_file()` recognizes either `.md` or `.mdx`, so a Managed Deep Agents `.md` can be emitted when built individually but is not discovered by the bulk variant glob. Use `.mdx` for pages that must participate in a normal full build.
 
-Each language artifact receives its matching conditional content, scoped snippet imports, OSS links, and unqualified Managed Deep Agents cross-links. For example, the shared quickstart includes `:::python` and `:::js` setup commands plus unprefixed `/langsmith/managed-deep-agents-...` links; the two renders select the matching commands and point those links to the current language route.
+Each language artifact receives its matching conditional content, scoped snippet imports, OSS links, and unqualified Managed Deep Agents cross-links. The shared agent-definition, connections, and project-structure sources illustrate this convention: they import snippets from unprefixed `/snippets/langsmith/...` paths, use `:::python` and `:::js` where code or file names differ, and link to sibling Managed Deep Agents pages with unprefixed `/langsmith/managed-deep-agents-...` routes.
 
-`docs.json` supplies the public default for unversioned and historical Managed Deep Agents URLs: configured redirects send them to Python routes. Separately, its Python and TypeScript Build dropdowns contain language-specific Managed Deep Agents entries. When adding, renaming, or removing a page, keep the source naming rule, both emitted route entries, and any legacy redirects synchronized.
+`docs.json` supplies the public default for unversioned and historical Managed Deep Agents URLs: configured redirects send those paths to Python routes. Separately, its Python and TypeScript Build dropdowns contain matching Managed Deep Agents page entries, organized into Get started, Agent capabilities, and Build and deploy groups. When adding, renaming, or removing a page, keep the source naming rule, both emitted route entries, and any legacy redirects synchronized.
 
 ## Conditional content contract
 
@@ -151,6 +157,7 @@ When changing this model:
 
 ## See also
 
+- [Build system architecture](/openwiki/architecture/build-system.md)
 - [Source directory map](/openwiki/architecture/source-map.md)
 - [Markdown preprocessing pipeline](/openwiki/concepts/preprocessing.md)
 - [Adding and modifying documentation pages](/openwiki/operations/adding-pages.md)

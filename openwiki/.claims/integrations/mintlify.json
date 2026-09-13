@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:2f4fee1385dcf04f224e4269f4c46f5a50ead89f3b74d249855c82c91c351ef0",
+  "pageVersion": "sha256:9eb7d08b8c95646c639adf62de14e25d443140baaa9741b783d79aa00f7f8acf",
   "claims": [
     {
       "id": "claim_80e624f4588748b9980bf9abba14af71",
@@ -34,7 +34,7 @@
         },
         {
           "resource": "repo://src/docs.json#L1-L88",
-          "version": "repo-lines-v1:sha256:923b149611495b6f074c50965932b195ff66b64da8bec3d0531e851c13f9365d:eyJzZWxlY3RlZExpbmVDb3VudCI6ODgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE2ZmIwOGZkYTFhY2I5NTdiNjExNmJkMzc4MTFhMWZlNDFhMDE2MTFjMDYzMWVkYmY3ODZkNjg4OWEyN2E1NWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRkNWNkMmZiNGYzZGY4ODQ1MTUyNTViMzk1MjNmMmY4YjU0NzJiZWVhOWY1NjZmZmNhMjA0ZGI4MDI1NjEwNDEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjEwMThiZWFjODhkMDY5MmE1M2YzMDEwNmZiNDNmZmVjNDhiMTcwZGI0MWVhMjdhMzhhZGU3ZGI3NjEzYTkyYjAifQ"
+          "version": "repo-lines-v1:sha256:99e73e2982586b420c9941e24cdf1505e5bafc34facb2fbba845635573b2b4b4:eyJzZWxlY3RlZExpbmVDb3VudCI6ODgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE2ZmIwOGZkYTFhY2I5NTdiNjExNmJkMzc4MTFhMWZlNDFhMDE2MTFjMDYzMWVkYmY3ODZkNjg4OWEyN2E1NWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRkNWNkMmZiNGYzZGY4ODQ1MTUyNTViMzk1MjNmMmY4YjU0NzJiZWVhOWY1NjZmZmNhMjA0ZGI4MDI1NjEwNDEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjEwMThiZWFjODhkMDY5MmE1M2YzMDEwNmZiNDNmZmVjNDhiMTcwZGI0MWVhMjdhMzhhZGU3ZGI3NjEzYTkyYjAifQ"
         }
       ]
     },
@@ -239,10 +239,56 @@
           "version": "repo-lines-v1:sha256:f595cdc28961335939bc94106cccc9a6da75fce1152a715e7961efb2ac957211:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiM2M1YTAzYmI0MDJmNzc5N2ZmNmE2MGM1NWU1ZWViYjA3NWRlMWZiODA2YWZmYjIwZTQwYjI5MzVhOGViYWQ5OCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNmEwYTYwM2UxYjkyZmM1MTYyNDRlOWNiNzkzZjY2NWZjMmFkNzhjZjc0MTQ2NmI5OTBmODkwOGNjYmEyZjRmYyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzFiY2I3ZmNmYTI5ODM3MWQ2M2YyYjhkNzMyMmE1NTNhZmJkOTZkNTMyZDc3NjJmNDc4ZTljMjU5NDVhYzIyZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiODJiNGYwZTZiYmYyOTBlODE2ODdhZGI5Y2U4ODQzMWE5NWJmZGI3OWMxMzYxYjVjNjY1ZjMyYjk0YWFmYTc5MCJ9"
         }
       ]
+    },
+    {
+      "id": "claim_3719a023fa714d0cb6f6380822a43d33",
+      "statement": "Each full documentation build deletes and recreates build/, then produces Python and JavaScript OSS variants, unversioned Deep Agents Code and OpenWiki content, LangSmith content, Managed Deep Agents variants, shared files, and llms indexes before Mintlify consumes the tree.",
+      "evidence": [
+        {
+          "resource": "repo://pipeline/core/builder.py#L462-L482",
+          "version": "repo-lines-v1:sha256:9ef254a0f90d2bffb34ae4fa22e5ccda91ab1165e1f8ff9bad9980600bbb3c26:eyJzZWxlY3RlZExpbmVDb3VudCI6MjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQzZjBiYWZlMWZlOTZjNmJiZDE2MmNhMmFkOTAxMTMwOTU0NjFkNWY1MmIzMGNkMGI3MTIyMDhiMjRlNTBiNTAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY2ZTdjNzFkYzRiMDNiMjc5ZGJjZGU5OWE0ZDgzNDBkMmYxNjdiMDM1M2VlODhiZDljNWZhZmYzMmUxMjMwMmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjRjMDRlODI2ZmRmNGQ4MDM0YTk5ZGRiNWUzZjZkNjk2YzA1MWM1OTcwOGFhZTNmYjJiYjhjMWIwOGJhNDE2NGUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQ2NDUwOTI3NGNlODE2OTIzMDQ4NTYxYjIyYTdjNzEzMzViOTNjN2M5YTVkMjc0NDBjNGE1N2I2NmM3N2M4N2EifQ"
+        },
+        {
+          "resource": "repo://pipeline/core/builder.py#L511-L538",
+          "version": "repo-lines-v1:sha256:13344818a6d454cf48b16dbdc928530b26a42f34a4d184d49906e5af63ba7669:eyJzZWxlY3RlZExpbmVDb3VudCI6MjgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI5YjZiMGUwZDliY2MxN2M1NjI1MDI3OWFkZmMyZjJmOWRjMDVjMTE3OGVmZTQ1ZDdiMjBlZDk1YTY0MjQ3ZTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk3OWI3MTI4ZmQ1NzVkZGZjYTlkZTM1NzIxZTEzNmM0YTU1NWQzMTY0ZmE2YTZkMTIxYTNmMDBkOGNiODc5MzAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ0ZGY4OGJjM2Y5OThlY2Y5N2M5MTYyYTE3NWQ5ZDVhYWMxOGMxNjViYmRhZTlmNTY2MGMwNjdkYTM5MmZmYjMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjgzMmIxYmFjZTZmNzZlZWI4OTZkNjczZWM2NDU3MDc4ZjZlZThmNjcyMzI2ZjcwZGI2NmY3ZDQ4ZjlkMDdlYWQifQ"
+        },
+        {
+          "resource": "repo://pipeline/core/builder.py#L75-L136",
+          "version": "repo-lines-v1:sha256:949e4203139c8a0525ca36ea161a9e5ecc45b767ad72829f8d3d2624562a9d96:eyJzZWxlY3RlZExpbmVDb3VudCI6NjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM3YzVhYjc5M2VjZTcyMTM3MjRiODY4N2NmOTI5ZjBmYWMyZjBkYTA1YjlmZjVlODM0YWMyNzQzZWQ3MTNkYjEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM2NWVmYjcwNTkxYjM3NDlkZGZiZjI1N2VlNDEwNmNiOWRiZGUxMmM0YTg2YTYwYTZlOTBjNmVkMzdlNjdiZGEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImIxZjE1NmU0ZDE1OGJlNGRkMzExOTNjZGRiZWQ2NGFhOTExYjEzOTUxOWZiMTI5YWEzMjFmZmQ4NzQ2OTdiNmEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjBlNDk4ZDg2ODA5MTc5NTA0YWNjOWUwNjdlMzY2MDY1ZDU3YzZmMmJjNzA5ZDA2ZWI5NGE4MTRkOTEwZTU4NzkifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_f1b06ac77dd94114a08cf9ec214d769c",
+      "statement": "The development command returns failure when the initial build fails, Mint exits nonzero, or the watcher stops unexpectedly, and it terminates the watcher and Mint subprocess on interruption.",
+      "evidence": [
+        {
+          "resource": "repo://pipeline/commands/dev.py#L133-L180",
+          "version": "repo-lines-v1:sha256:da655ab9a6ed488623a27746f6ee4bf784eaf16bcbbed7a8c2c0959017ae7e1e:eyJzZWxlY3RlZExpbmVDb3VudCI6NDgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFkYTVjNjZlMTdiMTQ1Mzk3ODM0YjhjODU0ZGM0MTkzZTIxMjUxODBhODk5NmExNGMzMTg4MzMyNmIyZWZiY2YiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAyNTJkMWZmYjU4YTg2MzlmZGVkNmIzODE4OWU4YzQxMTdhNzFjYjQyMGMxNDFlZGYxOGUwZmZjNWMzY2RiYzgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjFiYzM4YWNhNmM4ODZhOGRiZmQwNjBmN2JiNTJiOGZiMTdhMzkzZTM2YmFlZmU0ZGQ5OTlkZjU2MGJjNzNlZTMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImM4ZjY0NjQ0MDNhMGJlZTJmMzhlYTVjNzEyOGJkMTcyYWFlMDM0MjNlN2MyZDk1Y2U1YzA3NzM4NDA3ZDcyMzUifQ"
+        },
+        {
+          "resource": "repo://pipeline/commands/dev.py#L70-L90",
+          "version": "repo-lines-v1:sha256:07dafedfdc56027aec9cf6d5fb07fcda183bafdf6692b9601cc3d0930ee6fe2d:eyJzZWxlY3RlZExpbmVDb3VudCI6MjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMxNjA2Y2JkOWVhMzA1ZWY4YzZjNmJhYTA1MjY3Y2Y2MjJkZGE4MmE3YzdlNTczNWEyOTFjYTRlYjIxNmIwMmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNlNzU5NjJjZjg3ZGJiYjM1NjM5NGE3MTczMzkxZDM1ODAxY2U5NDc2YWIyM2U4ZDkzMGQ5Mjg2YzA2ZThhYTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImI0ZjE1MGViYjkzNTgxNWM4ZTAyMWRiZTM3YjUwNGRiYzRjZjg5NzgxOTdhNjk4OGQ4ODM1NGQ2ZGMwY2U0NDciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQzODY2MGZjYzZiZjc2ZjBkNmI5NTI1MDNlZjJjMmY1MDA5M2YyYmU0MzAxMDUwNjRiNTBkMGU0YjNkMjk2NWMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_7e461c079e92444e84c7f3d20d0d347a",
+      "statement": "Builder tests ensure versioned MDX imports language-scoped snippet copies and prevent a snippet import from traversing outside the generated snippets directory when page content is expanded.",
+      "evidence": [
+        {
+          "resource": "repo://tests/unit_tests/test_builder.py#L466-L488",
+          "version": "repo-lines-v1:sha256:24fe5e29f4496dbfa5a9812a5acf7c5d552e32e17f5b3076730c977c3d95f5f0:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY2N2VhOTk0N2JmMWNiMGY2MGFlMzcyNDMwZGU1MzhkN2M0MmU2NjZjODMxM2MwNGE4MmI1YzI3ZTFjZWFlODYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM5NDg3MzJkYzUwNDYwOTY1NzZjMWMwY2I3NDRhNTMxOTYzYWI5MTU0YzNiOTc2YmI1YzFjYmZjZGYyNTI3MmYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImEwZWI0NjRlZGYwMjBiN2IyMDg4Y2FkMTBmZGI4ZDJhYjJjZmQ1MjM4YzkzMDFlODBmZjJkNzUwNWU5NmI2YTMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjJmN2U0MDlhYTE3NDNiNGNiNDZkOGUyYzdiYjQwZWFjYTU5MTdkYjljZDQ2MDE3YTUwNjQxODc2NDkxYzE1MmEifQ"
+        },
+        {
+          "resource": "repo://tests/unit_tests/test_builder.py#L954-L1010",
+          "version": "repo-lines-v1:sha256:a6272e97f052262564d3194e5186fc2e24922710fe1035ca91858a5982aec80b:eyJzZWxlY3RlZExpbmVDb3VudCI6NTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE1MjgyYWJlNmFiNTAxOGFhNTBiZWE2NjRmN2FkZmVjYjhiM2NkNmQ2NmUwMDg1ZGE0ZmYzNjBiODljMzNjYjgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdjNzdiY2Q4ZTNiZGY4NWE0ZDc3ODc5ZTlmOWE3YmI5OTA3MGRmZTQ2NDNhMzk5ZWYyZjc5MjNjZDA3MjIyYmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNlNjJiODBiZDFjMDljMjNiYzFmMTY4Njg3NGJkZmE4NjE4NjNjZThmMzk1MzlkYmQ4ZTkzOTE0ZjU0YTIzZjQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZhM2IzMTZiODVmZjFjZjgyMmNhYzRlZDdiNWFlZjUzZDRjYmEyZDUzYTMwZWU1MGE4NjFmNjRiZjFmNTZhOGQifQ"
+        }
+      ]
     }
   ],
   "verification": {
     "by": "openwiki/0.4.3",
-    "at": "2026-09-11T08:21:01.441Z"
+    "at": "2026-09-13T08:18:47.732Z"
   }
 }

@@ -1,14 +1,18 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:4e093801fba5b496338aeab2cf2e3b1eeccd698101ac9f29198e64f32ccc6ad0",
+  "pageVersion": "sha256:8ae5293e10fc16e940d1e00c65d444d927709e72fe376ae7ddcb29b66ec7e5d3",
   "claims": [
     {
       "id": "claim_53bb7401e0214d36ae0249e90fe94e42",
       "statement": "The repository requires Python 3.13+, Node.js, and uv package manager. The `make install` command installs Python dependencies via `uv sync --all-groups`, npm packages, and Mintlify CLI globally.",
       "evidence": [
         {
-          "resource": "repo://Makefile#L82-L87",
-          "version": "repo-lines-v1:sha256:977a7ffd7851dae95a2e3ed3623de18bad9e07a3d5770fe2be8950000d192992:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYzZjNTgwMTljOTcwZTNiMTczMmFlNjZjOTAwODU2NDM4MjQ2OTUzZjEyY2JhMjlkNjE5YjAwNTcyZmZmMjQ1NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNTJhNWVkN2E2MDNkYTNjOGQ4NGZmMDQ4YTcxMjgyZjRmZjM4YzA3NmVlNTQzNjNhMGQzNjc1OWVjZWQ3ODM0YyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzQ1NDY3MzRiYWY2ZTY2ZGQ0M2Q3MDVmZjg3ZDA5YmM5MjA1NTE4MDU3OTdlMDQzNDZhZTA4YjRjNDU2ODEyMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiODcwZmYxMTQzZmQ5OGMwNzMwNjM0MTk2OTEwYTQ2ZmIzYmJlNzdlMzY0M2YwOGNjMGRlMTNjNzhiZGJiNmI1ZSJ9"
+          "resource": "repo://.mise.toml#L5-L13",
+          "version": "repo-lines-v1:sha256:85bb5e5451e11d08b6a62962affa72d0041a5d89b107502edd2e21bf572d300a:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTgyNmJlYTA1ZmU1MGE3M2E2NDVkOGZiMTJkYzI4MmYyNTM2MzQ0MzI2NmQ5MDE3MzcyZWFmODg0NTk0NjM0NSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiY2VmYTkyZDA0MjdkMWE2ZjkzY2ZmOTIxYmI1MGRkZDgzZGEwZDNlMDQwNTVmYjg0YWY4OTIzNGE2YmMzYzI2MyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMWNkNjJhYTA5ZjMzODVhYjA2MDY3NTY1N2ZmM2EwZjViZTcxN2VjNWNmMWUxZDlhMTYxMWVlYWMwZTJjM2NkZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNDM3MWViZjEyMzgyMTI4MzQ0ZGNiMzU2OTFlMzM4MTRlMDI2ZTIwMTE1ZmQxZjFlOWYzNTZkNzU5YjkyYjEyZCJ9"
+        },
+        {
+          "resource": "repo://Makefile#L123-L129",
+          "version": "repo-lines-v1:sha256:35fce74f839c9a22cf142c069698dee826667e8e65b9eee0c9982317dc1c9b41:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYzZjNTgwMTljOTcwZTNiMTczMmFlNjZjOTAwODU2NDM4MjQ2OTUzZjEyY2JhMjlkNjE5YjAwNTcyZmZmMjQ1NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNTJhNWVkN2E2MDNkYTNjOGQ4NGZmMDQ4YTcxMjgyZjRmZjM4YzA3NmVlNTQzNjNhMGQzNjc1OWVjZWQ3ODM0YyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzQ1NDY3MzRiYWY2ZTY2ZGQ0M2Q3MDVmZjg3ZDA5YmM5MjA1NTE4MDU3OTdlMDQzNDZhZTA4YjRjNDU2ODEyMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiODcwZmYxMTQzZmQ5OGMwNzMwNjM0MTk2OTEwYTQ2ZmIzYmJlNzdlMzY0M2YwOGNjMGRlMTNjNzhiZGJiNmI1ZSJ9"
         },
         {
           "resource": "repo://pyproject.toml#L6-L6",
@@ -279,10 +283,42 @@
           "version": "repo-lines-v1:sha256:12ae6453112552a5b36b8a67e9480263f7183b266dd0417c84829bcdf928322d:eyJzZWxlY3RlZExpbmVDb3VudCI6MTI4LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiJlMjM2NzMxOTM4OWUyY2YwM2ZlZmMyZWY1YzZhMTMyNDhkN2MxZWE5NDAxYTgxYWU3NzNjYzU1ZDJlMmE5YjkyIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiIzNDNiOWUyZWEyZDZlNzljNmI0YWY0OTYzYWM0NTU0NGI1ODE1YjY5YmFjMjQ3Yjk1NzM3OGYzYzEyMjAxOTYyIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MCwicHJlY2VkaW5nQ29udGV4dEhhc2giOiJlM2IwYzQ0Mjk4ZmMxYzE0OWFmYmY0Yzg5OTZmYjkyNDI3YWU0MWU0NjQ5YjkzNGNhNDk1OTkxYjc4NTJiODU1IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MSwiZm9sbG93aW5nQ29udGV4dEhhc2giOiI1NTAzMmU5NjRkMDkzMjM1MWU1ZDE4NTI2OTI4MWIxNzFhM2EwOWIwOGIyODZlNjYxZWE0NzAzMjNjODJlYjRkIn0"
         }
       ]
+    },
+    {
+      "id": "claim_6e5f70263abf45789c184e9f6262ed9c",
+      "statement": "The project registers `docs` as the Python CLI entry point, AGENTS identifies it as the primary CLI, and `make dev` and `make build` invoke the module CLI after installing npm dependencies and setting `PYTHONPATH`.",
+      "evidence": [
+        {
+          "resource": "repo://AGENTS.md#L248-L253",
+          "version": "repo-lines-v1:sha256:2e10d54be2aa494eddf84fd94a02831e2efbc4bf2ecafa0ef03a11cd61e66abe:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZmUzY2EzNDA4MTM4N2NjNjFkMDU2ZmMwMjlkMjk2YWI0ZDFjMTliY2I5YWRkNGI1NTA1NTVkOWU5MWE5NjhmNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjE1YjA3MzM3OWVjYjljZWQ1NDc3YWVjODZmMjEyMzFmNWEzZDc2NWY5YjU1MTY2MDdkNTY4YmYwZTY2ZTJjMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjM1ZGJhM2EzMzkzN2U0OTFkODNkYzg0N2U0MzVlNGE3NjYwMTIyNDU0NWQyMDIyODE3ODY4MWNiODA5ZmQwNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYWMxODA3NDU2MDFkYWNmNzNiMTg3MmJhZWM4ODM0NTE5YWNmYWQ4ZjIzN2M0NWJkNDIzNmM2MzQwYzBmNWU4ZCJ9"
+        },
+        {
+          "resource": "repo://Makefile#L6-L14",
+          "version": "repo-lines-v1:sha256:12472bfb50bed2773bee4014d9ad5aceca8e31004b3df79ccd2db6a8a77c119d:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTAxZmFkY2FiMDRkNDgwYmFiMWY0Y2Y0Nzg0NzAyMmViMzNhMjhiM2E2ZmQ2YmJiMTg3ODMyYTY1Y2QxZmRlZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYWVhOTIyODFkNTkyMGZjM2RiNDEyMWFiMDlmMDkwNGMwZjMwMjMyODg1MTljNGU4MzBjOTlkOWI2Y2IyYTk2NSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMmY2MzcwY2Y4MjJlZTVkYjJjYjI3NTMyZGY4OTczOGQwMjgwNTgxNjExZDcxZTA0ZDYxYjRmYTZhMDYxNDgxOSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzIxYmMxNjY3MmZlMmU3OTUxMWJjMGI5MjIwNjdiY2FkNjZiNDQ2MGYzNzJkZTk3ZGZkNTdiZDcwMDhmYTE4ZiJ9"
+        },
+        {
+          "resource": "repo://pyproject.toml#L56-L57",
+          "version": "repo-lines-v1:sha256:380f3956c325a32028bc599a2de1d6da248085ae5b19b0468503d4df12660bf7:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNGVhYjRlYzYzZGU1MTdkYTRjZDhlNWM4MzA3ZmIyYzc3MzdkMzkxOTBhYjY5ZjMyYTVlOWVmODFlYTQ0MTZkZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNWJiMjlkOTE1NWI4YWQzZDVmYzBlNDFiMTQ5ZjFmMzUzYjczNzZiOTQ0NWJmYzdjNjU5MWQwNzMyZTgyYWEwMiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZDNkMTcxZGU3NTQzMWEwMjFhMGQ5NGZhNzZmYWJmMGQ3MTM5Yzg5OGMxYTBiNDRiNDNjYTYwOTAzZmExYjg0NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiODdhMjcwZjdjODdmMGI4MDhkZTAxNzI0ZGQ4NjIyMTEzNWNlNjhiZGIwY2UyNDljNDM0OTcxZGE5NjE4OTQzYSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_93102432e21b4db3879172b3b2f8e96f",
+      "statement": "`make export` runs `mint export` from `build` and requires a Mint CLI with the export command, Node LTS 20 or 22 rather than Node 25 or later, and an Enterprise Mintlify plan; `make htmltest` checks external URLs in that export.",
+      "evidence": [
+        {
+          "resource": "repo://Makefile#L16-L62",
+          "version": "repo-lines-v1:sha256:f518a4657bf41980da2ed92b5bf132ded009da773b396acdf6c9a3f3363140b1:eyJzZWxlY3RlZExpbmVDb3VudCI6NDcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjEzMjUzNTRmZGVlM2E4ZTAzNWM3YWQyMDVhNDMzMzBhNWFhMmNiNzZiY2Q5YmYwMTA1NDM5MjRiMGYzNGNmMGIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYxMjU5NTA3ZWJiZjc1NWY5N2IwYjc0OGYzOTI0ZGY1YTFiOTRjYjExYmNlZjhiZWI3ZGNiMGZmZjI0ZTc0NjAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhmNDYyNTkxNGY0OTkxNTBlMzY4NDFmM2QxODI2NzRjNmFmNzQzMzNmNjVlY2M4ZWM1YzZlZTMzNDY4ZTVlZWYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZmZjRlNDRlOGZmNDE5YzdiZTVmZTVkMjQxYTdlZmE5NTFmM2ZkYjk3ZjNhN2JmNDllY2UzNzA3OGQ3ZWFiZGQifQ"
+        },
+        {
+          "resource": "repo://README.md#L234-L248",
+          "version": "repo-lines-v1:sha256:2fbc2facdd0fb385f892edbadea3d4ea8726e2868113afda53c9ed24706d6b46:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY2YmUwNzUzMDNkODA1NTA3MzJjNmE3MmZjZjBjZWMwNjJmZWYyZDgzZWNhOTRhMWRlOTFjNjM3YTlhYTFkYjAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMwYjU1NzAwOGQxNmZmNGNlMTYxZGQ4N2NjYjVjM2YzYzhiMDIyMzkwYjc5OTJlYzVlNmJhODI1ZTc4NDZlZTUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjRjM2ZkZWJmZTcwM2U0Mjg5ZDdiZDI4MmQzMzVlOWZkYWIxMWQ4ZTc1MGZlOGNhMDM1OTUyOWQxYTQ2N2RkNWMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjA4YWMyMzQ0OGYwYTY1NTA0MWM5NjY4NjI3NjhkNGE4OWUzYTUyYzZlMWZmZmNjMGIxNDM2NWYzMDJhMGY4OWIifQ"
+        }
+      ]
     }
   ],
   "verification": {
     "by": "openwiki/0.4.3",
-    "at": "2026-09-08T08:21:44.568Z"
+    "at": "2026-09-13T08:18:47.732Z"
   }
 }

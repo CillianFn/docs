@@ -6,8 +6,12 @@ tags: [documentation, operations, navigation, routes, build-system]
 sources:
   - id: openwiki-source-18732c72f962c06354cb62db
     resource: repo://.agents/skills/add-docs-page/SKILL.md
+  - id: openwiki-source-b48b39ee604e5154ddb6fbad
+    resource: repo://.agents/skills/docs-edit/SKILL.md
   - id: openwiki-source-b372ee6d00ad6d446e0fc042
     resource: repo://.agents/skills/docs-review/SKILL.md
+  - id: openwiki-source-a5534bfe9d1400e6ecbd306e
+    resource: repo://.agents/skills/docs-team-voice/SKILL.md
   - id: openwiki-source-8037e2358a2c4f9b2c722a11
     resource: repo://AGENTS.md
   - id: openwiki-source-a2371d6362e5db4bc834ad03
@@ -40,10 +44,10 @@ sources:
     resource: repo://src/langsmith/managed-deep-agents-connections.mdx
   - id: openwiki-source-a39cb5ba9006abfe6280b6f8
     resource: repo://src/oss/openwiki/cli-reference.mdx
-generated: { by: "openwiki/0.4.3", at: "2026-09-11T08:21:01.441Z" }
+generated: { by: "openwiki/0.4.3", at: "2026-09-13T08:18:47.732Z" }
 verified:
   - by: openwiki/0.4.3
-    at: 2026-09-11T08:21:01.441Z
+    at: 2026-09-13T08:18:47.732Z
 ---
 
 # Adding and Modifying Documentation Pages
@@ -77,6 +81,8 @@ This flow separates authored inputs from generated results and makes review the 
 Use the `add-docs-page` skill for an addition, move, rename, deletion, navigation entry, or redirect. It supplies the repository procedure for source selection, frontmatter, navigation, redirects, and verification. The repository publishes skills in `.agents/skills/`; Claude Code users run `make skills` once to link them into `.claude/skills`.
 
 After finishing prose, use the `docs-review` skill in working-tree mode on the files changed by this pass. It reviews the diff, not pre-existing text, and pairs its style review with the deterministic Vale check. Do not run it on a draft or widen it to unrelated branch changes. A redirect-only or navigation-only change has no prose to review.
+
+For a revision to a page that already has an open pull request, use `docs-edit` before changing files. It keeps the work on the PR head branch, including the fork workflow, and uses `gh pr diff` to inspect the actual PR change. Use `docs-team-voice` while drafting or revising prose. It complements the mechanical rules in `AGENTS.md` and the Vale gate with guidance for concise, factual, linked prose.
 
 ## Choose the source owner and route model
 
@@ -139,7 +145,7 @@ To add a page:
    # Your Page Title
    ```
 
-3. **Register the extensionless emitted route in `src/docs.json`.** Omit `src/` and `.mdx`: `src/oss/openwiki/deployment.mdx` becomes `"oss/openwiki/deployment"`. A shared OSS source can appear as language-prefixed navigation paths backed by a single source file. A versioned page needs entries in both Python and TypeScript dropdowns. Integration pages are an exception: add them to their component `index.mdx`, touching `docs.json` only for a new component group.
+3. **Register the extensionless emitted route in `src/docs.json`.** Omit `src/` and `.mdx`: `src/oss/openwiki/deployment.mdx` becomes `"oss/openwiki/deployment"`. A shared OSS source can appear as language-prefixed navigation paths backed by a single source file and needs entries in both Python and TypeScript dropdowns. A source already specific to one language belongs only in its matching dropdown. Integration pages are an exception: add them to their component `index.mdx`, touching `docs.json` only for a new component group.
 4. **Use published internal routes in links.** Preserve anchors where needed. Use `@[Name]` only for eligible API-reference links, and validate it with `make check-cross-refs`.
 
 ## Move, rename, or remove a page
@@ -191,7 +197,7 @@ Use generated output to verify the source change, not to fix it. Select the narr
 
 - [ ] The content type was classified before editing, and the owning source rather than generated output was changed.
 - [ ] An ordinary page has plain-text frontmatter and the correct route-domain and language behavior.
-- [ ] `src/docs.json` places the emitted extensionless route in the correct navigation hierarchy, with both entries for a versioned page.
+- [ ] `src/docs.json` places the emitted extensionless route in the correct navigation hierarchy, with both entries for a shared OSS page.
 - [ ] Snippets, code samples, and integration tables were changed through their respective authored inputs or generators.
 - [ ] A move updated relative links and navigation, and every retired route has an appropriate redirect.
 - [ ] Vale, a local rendering/build check, built-link checks, and applicable focused checks have passed.

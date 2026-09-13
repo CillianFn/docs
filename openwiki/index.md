@@ -4,7 +4,7 @@ okf_version: "0.2"
 
 # Files
 
-- [Quickstart](quickstart.md) - Start a local documentation preview, route a change to its authored owner and task-specific procedure, and choose proportionate local and CI validation.
+- [Quickstart](quickstart.md) - Route a documentation change to its authored owner, task-specific skill, and proportionate validation boundary. Start a local Mintlify preview without confusing generated output for source.
 
 # Directories
 
